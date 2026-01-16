@@ -48,7 +48,7 @@ def predecir_video(duracion, tipo, plataforma, dia):
     return int(vistas_estimadas), round(ingreso_estimado, 2), decision
 
 # ------------------------------
-# 3️⃣ Ruta principal
+# 3️⃣ Ruta principal (herramienta)
 # ------------------------------
 @app.route("/")
 def index():
@@ -150,7 +150,7 @@ def index():
       </p>
 
       <p>
-      👉 Próximamente: enlace a la herramienta recomendada.
+      👉 Recomendación basada en IA para crear videos de forma rápida y profesional.
       </p>
     </div>
     """
@@ -158,7 +158,47 @@ def index():
     return render_template_string(html, datos=df_sim.to_dict(orient="records"))
 
 # ------------------------------
-# 4️⃣ Arrancar Flask
+# 4️⃣ Página SEO (contenido)
+# ------------------------------
+@app.route("/seo")
+def seo():
+    html = """
+    <!doctype html>
+    <title>Cómo saber si un video vale la pena antes de grabarlo</title>
+
+    <h1>Cómo saber si un video vale la pena antes de grabarlo (usando IA)</h1>
+
+    <p>
+    Crear videos requiere tiempo, energía y constancia. Uno de los mayores problemas
+    para los creadores es no saber si un video tendrá resultados antes de grabarlo.
+    </p>
+
+    <h2>Predicción de vistas con inteligencia artificial</h2>
+    <p>
+    Hoy es posible usar inteligencia artificial para analizar variables como duración,
+    plataforma y día de publicación para estimar el potencial de un video.
+    </p>
+
+    <h2>Tomar mejores decisiones antes de grabar</h2>
+    <p>
+    En lugar de grabar a ciegas, una herramienta de predicción permite priorizar ideas
+    con mayor probabilidad de éxito.
+    </p>
+
+    <h2>Conclusión</h2>
+    <p>
+    La IA no garantiza resultados exactos, pero sí mejora la toma de decisiones
+    para creadores que buscan eficiencia y crecimiento.
+    </p>
+
+    <p style="font-size:12px;color:gray;">
+    Artículo informativo. No representa promesas de resultados.
+    </p>
+    """
+    return render_template_string(html)
+
+# ------------------------------
+# 5️⃣ Arrancar Flask
 # ------------------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
