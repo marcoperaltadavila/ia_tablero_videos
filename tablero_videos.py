@@ -79,7 +79,15 @@ def index():
     html = """
     <!doctype html>
     <title>Tablero de Ideas de Video</title>
-    <h2>Tablero de Ideas de Video Simuladas</h2>
+    <h1>📊 Tablero de Ideas de Video con IA</h1>
+  <p>
+  Esta herramienta usa inteligencia artificial para estimar cuántas vistas y cuánto ingreso
+  podría generar un video antes de grabarlo.
+  </p>
+  <p>
+  Simula distintos tipos de contenido según duración, plataforma y día de publicación,
+  para ayudarte a decidir qué videos valen la pena crear.
+  </p>
     <table border="1" cellpadding="5">
     <tr>
         <th>Duración</th><th>Tipo</th><th>Plataforma</th><th>Día</th>
@@ -97,6 +105,18 @@ def index():
     </tr>
     {% endfor %}
     </table>
+
+    <p><strong>¿Cómo interpretar estos resultados?</strong></p>
+    <ul>
+      <li><b>Vistas estimadas:</b> proyección basada en datos históricos simulados.</li>
+      <li><b>Ingreso estimado:</b> cálculo aproximado usando CPM promedio.</li>
+      <li><b>Decisión:</b> indica si el video tiene potencial económico.</li>
+    </ul>
+
+    <p style="font-size:12px;color:gray;">
+    Esta herramienta ofrece estimaciones orientativas. Los resultados reales pueden variar según
+    calidad del contenido, audiencia y algoritmo de cada plataforma.
+    </p>
     """
     return render_template_string(html, datos=df_sim.to_dict(orient="records"))
 
@@ -105,7 +125,5 @@ def index():
 # ------------------------------
 import os
 
-if __name__ == "__main__":
-    app.run()
 
 
