@@ -80,6 +80,7 @@ def index():
     html = """
     <!doctype html>
     <title>Tablero de Ideas de Video</title>
+
     <h1>📊 Tablero de Ideas de Video con IA</h1>
 
     <p>
@@ -125,6 +126,20 @@ def index():
     <p style="font-size:12px;color:gray;">
     Esta herramienta ofrece estimaciones orientativas. Los resultados reales pueden variar según
     calidad del contenido, audiencia y algoritmo de cada plataforma.
+    </p>
+
+    <hr>
+
+    <h3>🚀 ¿Qué hacer si un video sale como “GRABAR”?</h3>
+    <p>
+    Si un video muestra buen potencial, lo ideal es producirlo rápido y con calidad.
+    Hoy existen herramientas con inteligencia artificial que permiten crear videos
+    profesionales en minutos, incluso sin experiencia previa.
+    </p>
+
+    <p>
+    En esta web analizamos qué ideas valen la pena grabar.
+    En el siguiente paso, te mostraremos cómo producirlas de forma eficiente.
     </p>
     """
 
