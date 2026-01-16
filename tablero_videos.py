@@ -141,6 +141,18 @@ def index():
     En esta web analizamos qué ideas valen la pena grabar.
     En el siguiente paso, te mostraremos cómo producirlas de forma eficiente.
     </p>
+
+    <div style="margin-top:20px;padding:15px;border:1px dashed #999;">
+      <strong>🎬 Herramienta recomendada</strong>
+      <p>
+      Para producir los videos que salen como <b>GRABAR</b>, recomendamos usar
+      una herramienta de inteligencia artificial especializada en creación de videos.
+      </p>
+
+      <p>
+      👉 Próximamente: enlace a la herramienta recomendada.
+      </p>
+    </div>
     """
 
     return render_template_string(html, datos=df_sim.to_dict(orient="records"))
