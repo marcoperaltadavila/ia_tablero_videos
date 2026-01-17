@@ -79,7 +79,12 @@ def index():
 
     html = """
     <!doctype html>
-    <title>Tablero de Ideas de Video</title>
+    <html>
+    <head>
+        <title>Tablero de Ideas de Video</title>
+        <meta name="google-site-verification" content="eNDNIUXalL9G4kRooM9xrerTdntwp2l1-VGwoukLEJw" />
+    </head>
+    <body>
 
     <h1>📊 Tablero de Ideas de Video con IA</h1>
 
@@ -137,22 +142,16 @@ def index():
     profesionales en minutos, incluso sin experiencia previa.
     </p>
 
-    <p>
-    En esta web analizamos qué ideas valen la pena grabar.
-    En el siguiente paso, te mostraremos cómo producirlas de forma eficiente.
-    </p>
-
     <div style="margin-top:20px;padding:15px;border:1px dashed #999;">
       <strong>🎬 Herramienta recomendada</strong>
       <p>
-      Para producir los videos que salen como <b>GRABAR</b>, recomendamos usar
-      una herramienta de inteligencia artificial especializada en creación de videos.
-      </p>
-
-      <p>
-      👉 Recomendación basada en IA para crear videos de forma rápida y profesional.
+      Recomendamos usar una herramienta de inteligencia artificial especializada
+      en creación de videos para producir contenido de forma rápida y profesional.
       </p>
     </div>
+
+    </body>
+    </html>
     """
 
     return render_template_string(html, datos=df_sim.to_dict(orient="records"))
@@ -164,7 +163,12 @@ def index():
 def seo():
     html = """
     <!doctype html>
-    <title>Cómo saber si un video vale la pena antes de grabarlo</title>
+    <html>
+    <head>
+        <title>Cómo saber si un video vale la pena antes de grabarlo</title>
+        <meta name="google-site-verification" content="eNDNIUXalL9G4kRooM9xrerTdntwp2l1-VGwoukLEJw" />
+    </head>
+    <body>
 
     <h1>Cómo saber si un video vale la pena antes de grabarlo (usando IA)</h1>
 
@@ -194,6 +198,9 @@ def seo():
     <p style="font-size:12px;color:gray;">
     Artículo informativo. No representa promesas de resultados.
     </p>
+
+    </body>
+    </html>
     """
     return render_template_string(html)
 
